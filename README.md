@@ -1,4 +1,6 @@
-# Integrated Urban Mobility Performance and Sustainability Analytics
+# 🚃 Integrated Urban Mobility Performance and Sustainability Analytics
+
+---
 
 <img src="https://img.freepik.com/premium-photo/autonomous-vehicles-harmonizing-with-green-urban-mobility-sustainable-smart-city_38013-22785.jpg?w=1380" width="100%">
 
@@ -6,14 +8,7 @@
 
 Modern cities generate enormous volumes of mobility data from road traffic sensors, public transportation systems, and shared micromobility services. However, these transportation domains are often analyzed independently, limiting the ability of city planners and policymakers to understand the broader mobility ecosystem and make coordinated infrastructure decisions.
 
-This project develops an integrated urban mobility analytics framework that combines traffic operations, public transit performance, and micromobility usage across six smart cities:
-
-- Stockholm
-- Oslo
-- Copenhagen
-- Helsinki
-- Gothenburg
-- Baku
+This project develops an integrated urban mobility analytics framework that combines traffic operations, public transit performance, and micromobility usage across six smart cities: Stockholm, Oslo, Copenhagen, Helsinki, Gothenburg, and Baku.
 
 Using Microsoft SQL Server for data preparation and Power BI for business intelligence reporting, the project explores congestion patterns, transportation efficiency, mobility behavior, and sustainability outcomes to support data-driven urban planning.
 
@@ -21,7 +16,7 @@ The objective is to demonstrate how integrated mobility analytics can help citie
 
 ---
 
-## Business Objectives
+# 1. Business Objectives
 
 This project aims to evaluate urban mobility performance across six cities by integrating traffic, public transit, and micromobility data into a unified analytical framework.
 
@@ -34,7 +29,7 @@ The analysis focuses on four key business questions:
 
 ---
 
-## Dataset Overview
+# 2. Dataset Overview
 
 The dataset contains over **450,000 urban mobility records** collected between **2023 and 2025** across six cities:
 
@@ -57,7 +52,7 @@ The data captures traffic conditions, public transportation performance, micromo
 
 ---
 
-## Project Workflow
+# 3. Project Workflow
 
 ```text
 Raw Mobility Data
@@ -84,23 +79,23 @@ Business Insights & Recommendations
 
 ---
 
-# Executive Summary
+# 4. Executive Summary
 
 <img src="dashboard preview/Executive Summary.png" width="100%">
 
-The integrated analysis reveals strong relationships between traffic conditions, public transportation performance, micromobility adoption, and sustainability outcomes across six cities.
+The integrated analysis reveals strong relationships between traffic conditions, public The analysis highlights the scale and diversity of urban mobility activity across six cities between 2023 and 2025, capturing over 56 million traffic observations, 4 billion public transit passenger movements, and 100,000 micromobility trips.
 
-Traffic congestion remains concentrated around morning and evening commuting periods, while increasing traffic density consistently reduces average travel speed across all road types.
+Public transportation remains the dominant mobility mode within the ecosystem. Metro services account for more than 85% of total ridership, significantly outperforming tram, commuter rail, bus, and ferry networks, emphasizing the critical role of high-capacity transit systems in supporting urban travel demand.
 
-Public transportation systems, particularly metro networks, carry the majority of passenger demand and contribute significantly to urban carbon reduction. Meanwhile, micromobility services have emerged as an important complementary transportation mode, particularly for short-distance urban travel and first-mile/last-mile connectivity.
+Micromobility services complement the transportation network by facilitating short-distance urban trips. E-scooters represent more than half of all micromobility usage, followed by city bikes and e-bikes, indicating strong adoption of flexible and sustainable transportation alternatives.
 
-Cities demonstrating stronger public transit adoption and higher electric vehicle penetration generally achieve superior sustainability outcomes, highlighting the importance of integrated transportation ecosystems in supporting long-term urban mobility goals.
+Together, these findings suggest that efficient urban mobility depends on a combination of high-capacity public transit systems and growing shared mobility services, both of which contribute to reducing dependence on private vehicles.
 
 ---
 
-# Analytical Findings
+# 5. Analytical Findings
 
-## 1. Traffic & Congestion Analysis
+## 5.1. Traffic & Congestion Analysis
 
 <img src="dashboard preview/Traffic and Congestion Analysis.png" width="100%">
 
@@ -112,16 +107,9 @@ Weather conditions further influence traffic operations. Rain and adverse weathe
 
 District-level analysis identifies recurring congestion hotspots that can support targeted infrastructure investment and traffic management initiatives.
 
-### Key Findings
-
-- Peak congestion occurs during commuting hours.
-- Traffic density negatively impacts average speed.
-- Weather conditions influence road performance.
-- Congestion is concentrated in a limited number of districts.
-
 ---
 
-## 2. Public Transit Performance
+## 5.2. Public Transit Performance
 
 <img src="dashboard preview/Public Transit Performance.png" width="100%">
 
@@ -131,16 +119,9 @@ Transit reliability remains consistently high across all transportation modes, w
 
 The relationship between ridership and service reliability indicates that passengers tend to favor transit systems offering both high capacity and dependable service.
 
-### Key Findings
-
-- Metro is the dominant transit mode.
-- Transit reliability remains consistently high.
-- Higher ridership is associated with better operational performance.
-- Public transit contributes significantly to CO₂ reduction.
-
 ---
 
-## 3. Micromobility Analytics
+## 5.3. Micromobility Analytics
 
 <img src="dashboard preview/Micromobility Analytics.png" width="100%">
 
@@ -152,16 +133,9 @@ Safety incidents remain relatively rare, indicating strong operational safety ac
 
 The relationship between distance and trip cost demonstrates clear pricing structures across vehicle types and usage patterns.
 
-### Key Findings
-
-- E-scooters dominate shared mobility demand.
-- Most trips are short-distance journeys.
-- Commuting is a primary use case.
-- Safety incidents remain uncommon.
-
 ---
 
-## 4. Sustainability Analytics
+## 5.4. Sustainability Analytics
 
 <img src="dashboard preview/Sustainability Analytics.png" width="100%">
 
@@ -171,54 +145,47 @@ Cities with stronger EV adoption generally achieve better environmental outcomes
 
 The opportunity matrix highlights cities with strong sustainability performance as well as locations where additional investment could generate meaningful improvements.
 
-### Key Findings
-
-- Sustainability outcomes differ across cities.
-- EV adoption is an important driver of environmental performance.
-- Public transit remains the largest source of carbon reduction.
-- Significant opportunities exist for future mobility investments.
-
 ---
 
-# Key Business Insights
+# 6. Key Business Insights
 
-#### Insight 1: Congestion Is Highly Concentrated During Peak Hours
+### Insight 1: Congestion Is Highly Concentrated During Peak Hours
 
 Traffic conditions deteriorate significantly during morning and evening commuting periods, creating recurring bottlenecks across major districts.
 
-#### Insight 2: Public Transit Is The Largest Contributor To Sustainable Mobility
+### Insight 2: Public Transit Is The Largest Contributor To Sustainable Mobility
 
 Metro and rail systems transport the majority of passengers while generating the highest carbon reduction impact.
 
-#### Insight 3: Micromobility Complements Traditional Transportation
+### Insight 3: Micromobility Complements Traditional Transportation
 
 Shared mobility services are primarily used for short-distance urban travel and first-mile/last-mile connectivity.
 
-#### Insight 4: Sustainability Performance Varies Across Cities
+### Insight 4: Sustainability Performance Varies Across Cities
 
 Cities with stronger EV adoption and public transit utilization demonstrate superior sustainability outcomes.
 
-#### Insight 5: Integrated Mobility Systems Deliver The Greatest Impact
+### Insight 5: Integrated Mobility Systems Deliver The Greatest Impact
 
 The combination of public transit, micromobility services, and EV adoption creates the strongest long-term sustainability performance.
 
 ---
 
-# Business Recommendations
+# 7. Business Recommendations
 
-#### Improve Congestion Management
+### Improve Congestion Management
 
 Deploy adaptive traffic management strategies and prioritize congestion mitigation initiatives in high-risk districts.
 
-#### Strengthen Public Transit Adoption
+### Strengthen Public Transit Adoption
 
 Improve transit accessibility, reliability, and network connectivity to encourage modal shift away from private vehicles.
 
-#### Expand Micromobility Infrastructure
+### Expand Micromobility Infrastructure
 
 Increase investment in cycling lanes, parking facilities, and shared mobility infrastructure to support first-mile and last-mile travel.
 
-#### Accelerate EV Adoption
+### Accelerate EV Adoption
 
 Expand charging infrastructure and develop policies that encourage electric vehicle usage in lower-performing cities.
 
@@ -229,7 +196,7 @@ Coordinate traffic, transit, and micromobility systems through unified mobility 
 
 ---
 
-# Future Enhancements
+# 8. Future Enhancements
 
 Potential future developments include:
 
