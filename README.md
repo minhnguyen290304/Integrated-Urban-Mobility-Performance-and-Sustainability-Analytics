@@ -1,344 +1,260 @@
 # Integrated Urban Mobility Performance and Sustainability Analytics
 
+<img src="https://img.freepik.com/premium-photo/autonomous-vehicles-harmonizing-with-green-urban-mobility-sustainable-smart-city_38013-22785.jpg?w=1380" width="100%">
+
 ## Project Overview
 
-Urban transportation systems generate massive volumes of data from road traffic sensors, public transit networks, and shared micromobility services. However, these data sources are often analyzed separately, limiting the ability to understand the broader mobility ecosystem.
+Modern cities generate enormous volumes of mobility data from road traffic sensors, public transportation systems, and shared micromobility services. However, these transportation domains are often analyzed independently, limiting the ability of city planners and policymakers to understand the broader mobility ecosystem and make coordinated infrastructure decisions.
 
-This project develops an end-to-end analytics solution that integrates traffic operations, public transit performance, and micromobility usage into a unified Smart City analytics framework.
+This project develops an integrated urban mobility analytics framework that combines traffic operations, public transit performance, and micromobility usage across six smart cities:
 
-Using SQL Server for data processing and Power BI for visualization, the project provides actionable insights into congestion patterns, transportation efficiency, sustainability outcomes, and urban mobility behavior across multiple European cities.
+- Stockholm
+- Oslo
+- Copenhagen
+- Helsinki
+- Gothenburg
+- Baku
+
+Using Microsoft SQL Server for data preparation and Power BI for business intelligence reporting, the project explores congestion patterns, transportation efficiency, mobility behavior, and sustainability outcomes to support data-driven urban planning.
+
+The objective is to demonstrate how integrated mobility analytics can help cities improve transportation efficiency, reduce congestion, strengthen public transit performance, and accelerate sustainability initiatives.
 
 ---
 
 ## Business Objectives
 
-### Traffic & Congestion
+This project aims to evaluate urban mobility performance across six cities by integrating traffic, public transit, and micromobility data into a unified analytical framework.
 
-- Which districts experience the highest traffic congestion?
-- How does traffic density impact vehicle speed?
-- How do weather conditions affect congestion levels?
-- What are the peak-hour traffic patterns?
+The analysis focuses on four key business questions:
 
-### Public Transit Performance
-
-- Which transit modes serve the largest passenger volumes?
-- How reliable are different transit systems?
-- How does service reliability impact ridership?
-- Which transit modes contribute most to CO₂ reduction?
-
-### Micromobility Analytics
-
-- What are the dominant vehicle types and trip purposes?
-- How does mobility demand vary throughout the day?
-- What safety incidents occur most frequently?
-- How do trip costs vary by distance and vehicle type?
-
-### Sustainability & Smart City Planning
-
-- Which cities demonstrate the strongest sustainability performance?
-- How does EV adoption differ across cities?
-- Which locations offer the greatest opportunities for sustainable mobility investments?
-- How can transportation systems contribute to carbon reduction goals?
+1. How do congestion patterns vary across cities, districts, and time periods?
+2. How effectively do public transportation systems support urban mobility demand?
+3. What role does micromobility play in short-distance and last-mile transportation?
+4. Which cities demonstrate the strongest sustainability performance through transit adoption, EV usage, and carbon reduction?
 
 ---
 
 ## Dataset Overview
 
-### 1. Traffic Flow Sensors
+The dataset contains over **450,000 urban mobility records** collected between **2023 and 2025** across six cities:
 
-- 200,000 observations
-- 15-minute traffic sensor records
-- Traffic volume
-- Vehicle speed
-- Congestion level
-- EV counts
-- Weather conditions
-- Road characteristics
+- Stockholm
+- Oslo
+- Copenhagen
+- Helsinki
+- Gothenburg
+- Baku
 
-### 2. Public Transit Ridership
+The analysis combines three transportation domains:
 
-- 149,992 records
-- Metro, tram, bus, rail and ferry operations
-- Ridership metrics
-- Delay metrics
-- On-time performance
-- Revenue indicators
-- CO₂ savings
+| Dataset | Records |
+|----------|----------|
+| Traffic Flow Sensors | 200,000 |
+| Public Transit Ridership | 149,992 |
+| Micromobility Trips | 100,000 |
 
-### 3. Micromobility Trips
-
-- 100,000 trip-level records
-- E-scooters
-- E-bikes
-- City bikes
-- Cargo bikes
-- Rider behavior
-- Trip costs
-- Safety incidents
-- Environmental impact
+The data captures traffic conditions, public transportation performance, micromobility usage, and sustainability indicators, providing a comprehensive view of urban mobility ecosystems.
 
 ---
 
 ## Project Workflow
 
 ```text
-Raw Data
-↓
+Raw Mobility Data
+        ↓
 Data Quality Assessment (SQL Server)
-↓
-Data Cleaning (SQL Server)
-↓
-Feature Engineering (SQL Server)
-↓
+        ↓
+Data Cleaning & Validation
+        ↓
+Feature Engineering
+        ↓
+Exploratory Data Analysis
+        ↓
 Interactive Dashboard Development (Power BI)
-↓
+        ↓
 Business Insights & Recommendations
 ```
 
----
+### Tools Used
 
-## Phase 1 — Data Quality Assessment
-
-Performed comprehensive data profiling in SQL Server:
-
-- Duplicate detection
-- Missing value assessment
-- Data type validation
-- Range checks
-- Consistency checks
-- Outlier identification
+| Tool | Purpose |
+|--------|---------|
+| ![SQL Server](https://img.shields.io/badge/MS_SQL_Server-CC2927?style=flat-square&logo=microsoftsqlserver&logoColor=white) | Data validation, cleaning, transformation, and feature engineering |
+| ![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=flat-square&logo=powerbi&logoColor=black) | Interactive dashboard development and business intelligence reporting |
 
 ---
 
-## Phase 2 — Data Cleaning & Feature Engineering
+# Executive Summary
 
-### Traffic Features
+<img src="dashboard preview/Executive Summary.png" width="100%">
 
-- Peak Hour Flag
-- Congestion Score
-- EV Adoption Ratio
-- Truck Ratio
-- Weather Severity Category
-- Traffic Density
+The integrated analysis reveals strong relationships between traffic conditions, public transportation performance, micromobility adoption, and sustainability outcomes across six cities.
 
-### Public Transit Features
+Traffic congestion remains concentrated around morning and evening commuting periods, while increasing traffic density consistently reduces average travel speed across all road types.
 
-- Passenger Balance
-- Utilization Category
-- Delay Category
+Public transportation systems, particularly metro networks, carry the majority of passenger demand and contribute significantly to urban carbon reduction. Meanwhile, micromobility services have emerged as an important complementary transportation mode, particularly for short-distance urban travel and first-mile/last-mile connectivity.
 
-### Micromobility Features
-
-- Distance Category
-- Duration Category
-- Cost Per KM
-- Battery Consumption
-- Trip Time Segment
+Cities demonstrating stronger public transit adoption and higher electric vehicle penetration generally achieve superior sustainability outcomes, highlighting the importance of integrated transportation ecosystems in supporting long-term urban mobility goals.
 
 ---
 
-## Phase 3 — Exploratory Analytics in Power BI
+# Analytical Findings
 
-Interactive dashboards were developed to analyze:
+## 1. Traffic & Congestion Analysis
 
-- Traffic Operations
-- Transit Performance
-- Micromobility Usage
-- Sustainability Outcomes
+<img src="dashboard preview/Traffic and Congestion Analysis.png" width="100%">
 
----
+The analysis reveals clear rush-hour congestion patterns with two recurring peaks occurring during morning and evening commuting periods.
 
-## Dashboard Pages
+Traffic Density vs Speed analysis demonstrates a strong inverse relationship between traffic density and travel speed. Higher-capacity road types such as motorways and expressways maintain better performance under increasing traffic loads, while local roads experience faster deterioration.
 
-### Executive Summary
+Weather conditions further influence traffic operations. Rain and adverse weather generally increase congestion levels while reducing average travel speed across all cities.
 
-Provides a high-level overview of urban mobility performance.
+District-level analysis identifies recurring congestion hotspots that can support targeted infrastructure investment and traffic management initiatives.
 
-**KPIs**
+### Key Findings
 
-- Total Traffic Volume
-- Total Ridership
-- Total Mobility Trips
-- Total CO₂ Saved
-
-**Visualizations**
-
-- Traffic Volume Trend
-- Transit Type Share
-- Vehicle Type Share
+- Peak congestion occurs during commuting hours.
+- Traffic density negatively impacts average speed.
+- Weather conditions influence road performance.
+- Congestion is concentrated in a limited number of districts.
 
 ---
 
-### Traffic & Congestion Analysis
+## 2. Public Transit Performance
 
-Analyzes traffic operations and congestion behavior.
+<img src="dashboard preview/Public Transit Performance.png" width="100%">
 
-**KPIs**
+Metro systems dominate passenger demand across the transportation network, carrying the majority of ridership while also contributing the largest share of carbon reduction.
 
-- Average Congestion Score
-- Average Speed
-- Peak Hour Traffic Volume
-- EV Adoption Rate
+Transit reliability remains consistently high across all transportation modes, with On-Time Performance exceeding 90% in most cases.
 
-**Visualizations**
+The relationship between ridership and service reliability indicates that passengers tend to favor transit systems offering both high capacity and dependable service.
 
-- Hourly Congestion Score
-- Traffic Density vs Speed Performance
-- Top Congested Districts
-- Impact of Weather on Traffic Conditions
+### Key Findings
 
----
-
-### Public Transit Performance
-
-Evaluates efficiency and reliability of public transportation.
-
-**KPIs**
-
-- Total Ridership
-- Average OTP
-- Average Delay
-- Transit CO₂ Saved
-
-**Visualizations**
-
-- Transit Mode Ridership
-- On-Time Performance by Transit Mode
-- Average Delay by Transit Mode
-- CO₂ Saved by Transit Mode
-- Ridership vs Service Reliability
+- Metro is the dominant transit mode.
+- Transit reliability remains consistently high.
+- Higher ridership is associated with better operational performance.
+- Public transit contributes significantly to CO₂ reduction.
 
 ---
 
-### Micromobility Analytics
+## 3. Micromobility Analytics
 
-Examines user behavior and mobility patterns.
+<img src="dashboard preview/Micromobility Analytics.png" width="100%">
 
-**KPIs**
+Micromobility usage is heavily concentrated in e-scooters and city bikes, highlighting strong adoption of shared mobility solutions for short-distance travel.
 
-- Total Trips
-- Average Distance
-- Average Duration
-- Micro CO₂ Saved
+Most trips are relatively short and occur during commuting periods, supporting the role of micromobility as a first-mile and last-mile transportation solution.
 
-**Visualizations**
+Safety incidents remain relatively rare, indicating strong operational safety across the mobility ecosystem.
 
-- Vehicle Type Share
-- Purpose Distribution
-- Time-of-Day Usage
-- Distance Category Distribution
-- Safety Analysis
-- Cost vs Distance
+The relationship between distance and trip cost demonstrates clear pricing structures across vehicle types and usage patterns.
 
----
+### Key Findings
 
-### Sustainability Analytics
-
-Measures environmental impact and sustainable mobility adoption.
-
-**KPIs**
-
-- Total CO₂ Saved
-- EV Adoption Rate
-- Total Ridership
-- Total Trips
-
-**Visualizations**
-
-- CO₂ Saved by City
-- EV Adoption by City
-- Opportunity Matrix
-- City Sustainability Benchmarking
+- E-scooters dominate shared mobility demand.
+- Most trips are short-distance journeys.
+- Commuting is a primary use case.
+- Safety incidents remain uncommon.
 
 ---
 
-## Key Insights
+## 4. Sustainability Analytics
 
-### Traffic
+<img src="dashboard preview/Sustainability Analytics.png" width="100%">
 
-- Peak congestion occurs during morning and evening commuting periods.
-- Higher traffic density significantly reduces average travel speed.
-- Weather conditions amplify congestion severity.
+Sustainability performance varies across cities, driven by differences in public transit utilization and electric vehicle adoption.
 
-### Public Transit
+Cities with stronger EV adoption generally achieve better environmental outcomes, while high-capacity transit systems remain the largest contributors to carbon reduction.
 
-- Metro systems carry the majority of passengers.
-- Higher service reliability is associated with stronger ridership performance.
-- Public transit contributes substantially to carbon reduction.
+The opportunity matrix highlights cities with strong sustainability performance as well as locations where additional investment could generate meaningful improvements.
 
-### Micromobility
+### Key Findings
 
-- E-scooters dominate shared mobility usage.
-- Commuting and leisure represent the largest trip purposes.
-- Most trips are short-distance urban journeys.
-
-### Sustainability
-
-- Significant CO₂ reductions are achieved through public transit and shared mobility.
-- EV adoption varies considerably across cities.
-- Several cities demonstrate strong potential for further sustainable transportation investments.
+- Sustainability outcomes differ across cities.
+- EV adoption is an important driver of environmental performance.
+- Public transit remains the largest source of carbon reduction.
+- Significant opportunities exist for future mobility investments.
 
 ---
 
-## Technology Stack
+# Key Business Insights
 
-### Database
+#### Insight 1: Congestion Is Highly Concentrated During Peak Hours
 
-- Microsoft SQL Server
+Traffic conditions deteriorate significantly during morning and evening commuting periods, creating recurring bottlenecks across major districts.
 
-### Business Intelligence
+#### Insight 2: Public Transit Is The Largest Contributor To Sustainable Mobility
 
-- Power BI
+Metro and rail systems transport the majority of passengers while generating the highest carbon reduction impact.
 
-### Data Processing
+#### Insight 3: Micromobility Complements Traditional Transportation
 
-- SQL
+Shared mobility services are primarily used for short-distance urban travel and first-mile/last-mile connectivity.
 
----
+#### Insight 4: Sustainability Performance Varies Across Cities
 
-## Repository Structure
+Cities with stronger EV adoption and public transit utilization demonstrate superior sustainability outcomes.
 
-```text
-Integrated-Urban-Mobility-Performance-and-Sustainability-Analytics/
-│
-├── datasets/
-│
-├── sql/
-│   ├── 01_data_quality_assessment.sql
-│   ├── 02_data_cleaning.sql
-│   ├── 03_feature_engineering.sql
-│
-├── dashboard/
-│   ├── executive_summary.png
-│   ├── traffic_congestion_analysis.png
-│   ├── public_transit_performance.png
-│   ├── micromobility_analytics.png
-│   └── sustainability_analytics.png
-│
-├── powerbi/
-│   └── Urban_Mobility_Analytics.pbix
-│
-└── README.md
-```
+#### Insight 5: Integrated Mobility Systems Deliver The Greatest Impact
+
+The combination of public transit, micromobility services, and EV adoption creates the strongest long-term sustainability performance.
 
 ---
 
-## Future Enhancements
+# Business Recommendations
+
+#### Improve Congestion Management
+
+Deploy adaptive traffic management strategies and prioritize congestion mitigation initiatives in high-risk districts.
+
+#### Strengthen Public Transit Adoption
+
+Improve transit accessibility, reliability, and network connectivity to encourage modal shift away from private vehicles.
+
+#### Expand Micromobility Infrastructure
+
+Increase investment in cycling lanes, parking facilities, and shared mobility infrastructure to support first-mile and last-mile travel.
+
+#### Accelerate EV Adoption
+
+Expand charging infrastructure and develop policies that encourage electric vehicle usage in lower-performing cities.
+
+#### Promote Integrated Mobility Planning
+
+Coordinate traffic, transit, and micromobility systems through unified mobility strategies and data-driven urban planning initiatives.
+
+
+---
+
+# Future Enhancements
 
 Potential future developments include:
 
 - Traffic Volume Forecasting
 - Congestion Prediction Models
-- Transit Demand Forecasting
+- Public Transit Demand Forecasting
 - Micromobility Demand Prediction
 - Real-Time Mobility Monitoring
-- Smart City Decision Support System
-- Machine Learning-Based Transportation Optimization
+- Smart City Decision Support Systems
+- Mobility Digital Twin Development
+- AI-Driven Urban Mobility Optimization
 
 ---
 
 ## Author
 
-**Nguyen Sang Minh**
+**Minh Nguyen** 🐧
 
-Data Analytics | Business Intelligence | SQL | Power BI
+---
+
+## Connect With Me
+
+- LinkedIn: https://www.linkedin.com/in/minh-nguyen-9016a627a/
+- Email: minhnguyen29p304@gmail.com
+
+---
+
+⭐ Nothing is impossible 💫 Learn, learn more, learn forever
